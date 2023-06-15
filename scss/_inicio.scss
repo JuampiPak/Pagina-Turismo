@@ -1,0 +1,50 @@
+@import "mediaqueries";
+
+body {
+  main {
+    article {
+      .inicio {
+        width: 100%;
+        height: 100vh;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include mobile() {
+          background-position: 15%;
+          text-align: center;
+        }
+
+        h3 {
+          font-size: 110px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px #000;
+    margin: 0;
+
+    @include mobile() {
+      font-size: 5rem;
+    }
+        }
+
+        .btn {
+          outline: none;
+          border: none;
+          margin-top: 20px;
+          font-size: 22px;
+          color: #fff;
+          padding: 10px 27px;
+          border-radius: 16px;
+          background-color: rgb(22, 113, 204);
+          cursor: pointer;
+          transition: 0.5s;
+        }
+        }
+      }
+    }
+  }

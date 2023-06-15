@@ -1,379 +1,321 @@
-/* Estilos globales */
-
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-li{
-    list-style: none;
+html {
+  scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-a:hover{
-    text-decoration: none;
+li {
+  list-style: none;
 }
 
-a:-webkit-any-link {
-    color: #ffffff;
-    cursor: pointer;
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* Clases reutilizables */
-
-
-.btn{
-    outline: none;
-    border: none;
-    margin-top: 20px;
-    font-size: 22px;
-    color: #fff;
-    padding: 10px 27px;
-    border-radius: 16px;
-    background-color: rgb(22, 113, 204);
-    cursor: pointer;
-    transition: 0.5s;
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(11px);
+  z-index: 9;
+}
+@media screen and (max-width: 480px) {
+  body header {
+    display: block;
+    backdrop-filter: none;
+    background-color: transparent;
+  }
 }
 
-.btn:hover{
-    background-color: rgb(20, 57, 94);
+body main article .inicio {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-/* Navbar */
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter:blur(11px) ;
-    z-index: 9;
-}
-
-.nav{
-    width: 90%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 9;
-}
-
-
-.nav .logo-nav img{
-    width: 17.5rem;
-    height: 11.3rem;
-    position: absolute;
-    left: 0;
-    top: -20px;
-}
-
-.nav .items-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav .items-nav li{
-    padding: 0 10px;
-}
-
-.nav .items-nav a{
-    color: #fff;
-    font-size: 22px;
-    text-shadow: 1px 1px #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* Inicio */
-
-.inicio{
-    width: 100%;
-    height: 100vh;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url(../img/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.inicio h3{
-    font-size: 110px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
-    text-shadow: 1px 1px #000;
-    margin: 0;
-}
-
-
-/* Viajes */
-
-.viajes{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.subtitulo h4{
-    color: #1e29a3;
-    font-size: 50px;
+@media screen and (max-width: 480px) {
+  body main article .inicio {
+    background-position: 15%;
     text-align: center;
-    margin: 0;
+  }
+}
+body main article .inicio h3 {
+  font-size: 110px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  body main article .inicio h3 {
+    font-size: 5rem;
+  }
+}
+body main article .inicio .btn {
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 27px;
+  border-radius: 16px;
+  background-color: rgb(22, 113, 204);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.subtitulo{
-    margin-top: 9.5rem;
+.footer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
 }
-
-
-
-.subtitulo p{
-    font-size: 19px;
-    color: #4d4d4d;
-    text-align: center;
+.footer .sitio-descripcion {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.galeria{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0 20px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.galeria .contenedor img{
-    width: 325px;
-    height: 500px;
-    object-fit: cover;
-}
-
-/* Ofertas */
-
-.ofertas{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 480px) {
+  .footer .sitio-descripcion {
     flex-direction: column;
+    gap: 0.5rem;
+  }
 }
-
-.ofertas .subtitulo{
-    font-size: 50px;
-    color: #1e29a3;
+.footer .logo-footer img {
+  width: 18.8rem;
+  height: 12.5rem;
 }
-
-
-.item-oferta{
-    position: relative;
-    background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XE3CZCLCOREFBF2LSJZSDFVGQY.jpg");
-    width: 100%;
-    height: 70vh;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.item-oferta h3{
-    color: #fff;
-    font-size: 45px;
-    text-shadow: 1px 1px #000;
-}
-
-.btn-oferta{
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid #1e29a3;
-    color: #1e29a3;
-    border-radius: 8px;
-    padding: 11px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-  /* Novedades */
-
-.novedades{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-}
-
-.novedades .subtitulo{
-    font-size: 50px;
-    color: #1e29a3;
-}
-
-.item-novedad{
-    position: relative;
-    background-image: url("https://aeronauticapy.com/wp-content/uploads/2020/05/1451287800_145128_1451287800_noticia_normal.jpg");
-    width: 100%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.item-novedad h3{
-    color: #fff;
-    font-size: 45px;
-    text-shadow: 1px 1px #000;
-}
-
-.btn-novedad{
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid #1e29a3;
-    color: #1e29a3;
-    border-radius: 8px;
-    padding: 11px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.footer{
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-}
-
-.sitio-descripcion{
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-footer img{
-    width: 300px;
-    height: 200px;
-}
-
-.redes-sociales a{
-    margin: 0 20px;
-}
-
-/* Contacto */ 
-
-.contacto{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contacto .subtitulo{
-    font-size: 50px;
-    color: #1e29a3;
-}
-
-.item-contacto{
-    position: relative;
-    background-image: url("https://www.bbva.com/wp-content/uploads/2020/12/turismo_sostenible.jpg");
-    width: 100%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.item-contacto h3{
-    color: #fff;
-    font-size: 45px;
-    text-shadow: 1px 1px #000;
-}
-
-.btn-contacto{
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid #1e29a3;
-    color: #1e29a3;
-    border-radius: 8px;
-    padding: 11px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-@media  (max-width: 480px) {
-    .logo-nav img{
-        display: none;
-    }
-    .items-nav ul{
-        margin: 0;
-        padding: 0;
-    }
-    .items-nav a{
-        font-size: .5rem;
-    }
-    .inicio{
-        background-position: 15%;
-        text-align: center;
-    }
-    .inicio h3{
-        font-size: 5rem;
-    }
-    .logo-footer img{
+@media screen and (max-width: 480px) {
+  .footer .logo-footer img {
     display: none;
-    }
-    .btn-novedad{
-        background: #1e29a376;
-        color: lightblue;
-        margin-bottom: .5rem;
-    }
-    .item-contacto h3,
-    .item-novedad h3{
-        text-align: center;
-        font-size: 2rem;
-    }
-    .redes-sociales{
-        display: flex;
-    }
-    .sitio-descripcion{
-        flex-direction: column;
-        gap: .5rem;
-    }
+  }
 }
+.footer .redes-sociales a {
+  margin: 0 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .footer .redes-sociales {
+    display: flex;
+  }
+}
+
+body main .viajes {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .viajes .subtitulo {
+  margin-top: 9.5rem;
+}
+body main .viajes .subtitulo h4 {
+  color: #1e29a3;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+body main .viajes .subtitulo p {
+  font-size: 19px;
+  color: #4d4d4d;
+  text-align: center;
+}
+body main .viajes .galeria {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+body main .viajes .galeria .contenedor img {
+  width: 325px;
+  height: 500px;
+  object-fit: cover;
+}
+body main .viajes .btn-contenedor .btn {
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 27px;
+  border-radius: 16px;
+  background-color: rgb(22, 113, 204);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+body main .ofertas {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .ofertas .subtitulo {
+  font-size: 50px;
+  color: #1e29a3;
+}
+body main .ofertas .item-oferta {
+  position: relative;
+  background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XE3CZCLCOREFBF2LSJZSDFVGQY.jpg");
+  width: 100%;
+  height: 70vh;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .ofertas .item-oferta h3 {
+  color: #fff;
+  font-size: 45px;
+  text-shadow: 1px 1px #000;
+}
+body main .ofertas .btn-oferta {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #1e29a3;
+  color: #1e29a3;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body main .novedades {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+body main .novedades .subtitulo {
+  font-size: 50px;
+  color: #1e29a3;
+}
+body main .novedades .item-novedad {
+  position: relative;
+  background-image: url("https://aeronauticapy.com/wp-content/uploads/2020/05/1451287800_145128_1451287800_noticia_normal.jpg");
+  width: 100%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .novedades .item-novedad h3 {
+  color: #fff;
+  font-size: 45px;
+  text-shadow: 1px 1px #000;
+}
+@media screen and (max-width: 480px) {
+  body main .novedades .item-novedad h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+body main .novedades .btn-novedad {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #1e29a3;
+  color: #1e29a3;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 22px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  body main .novedades .btn-novedad {
+    background: rgba(30, 41, 163, 0.462745098);
+    color: lightblue;
+    margin-bottom: 0.5rem;
+  }
+}
+
+body main .contacto {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+body main .contacto .subtitulo {
+  font-size: 50px;
+  color: #1e29a3;
+}
+body main .contacto .item-contacto {
+  position: relative;
+  background-image: url("https://www.bbva.com/wp-content/uploads/2020/12/turismo_sostenible.jpg");
+  width: 100%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .contacto .item-contacto h3 {
+  color: #fff;
+  font-size: 45px;
+  text-shadow: 1px 1px #000;
+}
+@media screen and (max-width: 480px) {
+  body main .contacto .item-contacto h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+body main .contacto .item-contacto .btn-novedad {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #1e29a3;
+  color: #1e29a3;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=estilos.css.map */
